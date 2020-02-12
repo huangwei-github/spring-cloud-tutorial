@@ -1,9 +1,9 @@
 spring:
   application:
-    name: spring-cloud-eureka
+    name: springcloud-eureka-server
 
 server:
-  port: 8080
+  port: 8761
 
 eureka:
   instance:
