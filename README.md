@@ -1,6 +1,6 @@
 ## spring-cloud-tutorial
 
-### 1.Eureka
+### 1. Eureka
 
 当 Client 向 Server 注册时，它会提供一些元数据，例如主机和端口，URL，主页等。Eureka Server 从每个 Client 实例接收心跳消息。 如果心跳超时，则通常将该实例从注册 Server 中删除
 
@@ -19,5 +19,12 @@ Zuul可以实现网关的功能,它既可以路由,也可以过滤
 - 过滤功能: 创建filter类,继承ZuulFilter
 
 ### 4. 配置中心
-配置服务器的默认端口为 8888，如果修改了默认端口，则客户端项目就不能在 application.yml 或 application.properties 中配置 spring.cloud.config.uri，必须在 bootstrap.yml 或是 bootstrap.properties 中配置，原因是 bootstrap 开头的配置文件会被优先加载和配置，切记。
 
+- 配置服务器的默认端口为 `8888`，如果修改了默认端口，则客户端项目就不能在 `application.yml` 或 `application.properties` 中配置 `spring.cloud.config.uri`，必须在 `bootstrap.yml` 或是 `bootstrap.properties` 中配置，原因是 `bootstrap` 开头的配置文件会被优先加载和配置，切记。
+- 操作起来很简单，只需要为不同的环境编写专门的配置文件，如：`application-dev.yml`、`application-prod.yml`， 启动项目时只需要增加一个命令参数 `--spring.profiles.active=`环境配置 即可，启动命令如下：
+
+```java -jar hello-spring-cloud-web-admin-feign-1.0.0-SNAPSHOT.jar --spring.profiles.active=prod```
+
+### 5. Zipkin
+
+分布式跟踪系统[twitter].收集服务的定时数据, 解决微服务架构中的延迟问题, 包括数据的收集, 存储, 查找和展现
