@@ -3,7 +3,7 @@ spring:
     name: springcloud-zuul
 
 server:
-  port: 8769
+  port: 8766
 
 eureka:
   client:

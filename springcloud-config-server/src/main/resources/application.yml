@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: springcloud-config-server
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/huangwei-github/spring-cloud-tutorial
+          search-paths: springcloud-config-server/resources/config-file
+
+server:
+  port: 8767
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
