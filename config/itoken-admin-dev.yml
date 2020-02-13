@@ -1,21 +1,17 @@
 spring:
   application:
-    name: itoken-zuul
-  boot:
-    admin:
-      client:
-        url: http://127.0.0.1:9004
+    name: itoken-admin
   zipkin:
     base-url:
-      default-zone: http://127.0.0.1:9411
+      default-zone: http://localhost:9411
 
 server:
-  port: 9003
+  port: 9004
 
 eureka:
   client:
     service-url:
-      default-zone: http://127.0.0.1:9001/eureka
+      default-zone: http://localhost:9001/eureka
 
 management:
   endpoint:
