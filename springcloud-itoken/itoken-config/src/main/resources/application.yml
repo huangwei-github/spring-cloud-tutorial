@@ -8,8 +8,6 @@ spring:
         git:
           uri: https://github.com/huangwei-github/spring-cloud-tutorial
           search-paths: springcloud-itoken/itoken-config/config
-          username:
-          password:
   boot:
     admin:
       client:
@@ -23,7 +21,7 @@ server:
 eureka:
   client:
     service-url:
-      default-zone: http://localhost:9001/eureka
+      defaultZone: http://localhost:9001/eureka    #defaultZone,写成default-zone可能会出错
 
 management:
   endpoint:
