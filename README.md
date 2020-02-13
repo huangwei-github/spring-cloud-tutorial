@@ -1,5 +1,7 @@
 ## spring-cloud-tutorial
 
+> 声明:该项目仅作本人练习使用,相关教程由[千峰教育](https://www.funtl.com)提供. 
+
 ### 1. Eureka
 
 当 Client 向 Server 注册时，它会提供一些元数据，例如主机和端口，URL，主页等。Eureka Server 从每个 Client 实例接收心跳消息。 如果心跳超时，则通常将该实例从注册 Server 中删除
@@ -34,3 +36,7 @@ Zuul可以实现网关的功能,它既可以路由,也可以过滤
 ### 6. Springboot Admin
 
 监控管理系统.系统健康状态,会话数量,服务资源,延迟度.
+
+### 7. Spring Cloud itoken
+
+itoken是一个springcloud项目, springcloud-itoken相关文档请移步: [springcloud-itoken文档](./springcloud-itoken/README.md)

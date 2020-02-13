@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: itoken-admin
+  boot:
+    admin:
+      client:
+        url: http://127.0.0.1:9004
+  zipkin:
+    base-url:
+      default-zone: http://127.0.0.1:9411
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql:///db_itoken_service_admin
+      username: root
+      password: 123456789
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-brow: true
+
+server:
+  port: 9101
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://127.0.0.1:9001/eureka
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info

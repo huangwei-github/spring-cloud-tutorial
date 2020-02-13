@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: itoken-config
+  boot:
+    admin:
+      client:
+        url: http://127.0.0.1:9004
+  zipkin:
+    base-url: http://127.0.0.1:9411
+
+server:
+  port: 9002
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://127.0.0.1:9001/eureka
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
